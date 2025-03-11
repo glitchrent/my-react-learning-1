@@ -53,7 +53,7 @@ function ProductList() {
   return (
     <div className='container'>
       <div className="row">
-        <div className="col-13">
+        <div className="col-12">
             <Link className='btn btn-primary mb-2 float-end' to={"/product/create"}>
                 Create product
             </Link>
