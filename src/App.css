@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgb(255, 161, 227);
+    padding: 1rem;
+    text-align: center;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+div .header1 {
+    /* background-color: rgb(255, 255, 255); */
+    text-decoration: none;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+div .body1 {
+    margin-right: 10%;
+    margin-left: 10%;
+}

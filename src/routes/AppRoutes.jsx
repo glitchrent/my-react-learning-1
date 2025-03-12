@@ -11,6 +11,8 @@ import Manage from "../pages/admin/Manage";
 import Notfound from "../pages/admin/Notfound";
 import Layout from "../layouts/layout";
 import LayoutAdmin from "../layouts/LayoutAdmin";
+import CreateProduct from "../components/CreateProduct";
+import EditProduct from "../components/EditProduct";
 
 
 const AppRoutes = () => {
@@ -22,7 +24,8 @@ const AppRoutes = () => {
   <Routes>
     <Route>
 
-    
+    <Route path="/product/create" element={<CreateProduct />}/>
+    <Route path="/product/edit/:id" element={<EditProduct />}/>
       
       {/* Public */}
       <Route element={<Layout />}>

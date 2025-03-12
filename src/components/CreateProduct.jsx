@@ -14,6 +14,8 @@ function CreateProduct() {
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [image, setImage] = useState();
+    const [price, setPrice] = useState("");
+    const [amount, setAmount] = useState("");
     const [validationError, setValidationError] = useState({});
 
     const changeHandler = (event) => {
@@ -28,6 +30,8 @@ function CreateProduct() {
         formData.append('title', title)
         formData.append('description', description)
         formData.append('image', image)
+        formData.append('price', price)
+        formData.append('amount', amount)
 
         await axios.post(`http://localhost:8000/api/products`, formData).then(({data}) => {
             Swal.fire({
@@ -70,6 +74,7 @@ function CreateProduct() {
                                 </div>
                             )}
                             <Form onSubmit={createProduct}>
+
                                 <Row>
                                     <Col>
                                     <Form.Group controlId="Name">
@@ -100,6 +105,30 @@ function CreateProduct() {
                                     </Form.Group>
                                     </Col>
                                 </Row>
+
+                                <Row>
+                                    <Col>
+                                    <Form.Group controlId="Price">
+                                        <Form.Label>Price</Form.Label>
+                                        <Form.Control min="0" step="0.01" type="number"  placeholder="Enter price"  value={price} onChange={(event) => {
+                                            setPrice(event.target.value)
+                                        }} />
+                                    </Form.Group>
+                                    </Col>
+                                </Row>
+
+                                <Row>
+                                    <Col>
+                                    <Form.Group controlId="Amount">
+                                        <Form.Label>Amount</Form.Label>
+                                        <Form.Control  min="0" type="number"  placeholder="Enter amount" value={amount} onChange={(event) => {
+                                            setAmount(event.target.value)
+                                        }} />
+                                    </Form.Group>
+                                    </Col>
+                                </Row>
+
+
                                 <Button variant="primary" className="mt-2" size="lg" block="block" type="submit">
                                     Save
                                     </Button>

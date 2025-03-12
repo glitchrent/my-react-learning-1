@@ -8,25 +8,19 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ProductList from '../components/ProductList';
 import CreateProduct from '../components/CreateProduct';
 import EditProduct from '../components/EditProduct';
+import Tabletab1 from '../components/Tabletab1';
 
 function Home() {
   const [count, setCount] = useState(0)
 
   return (
-   <div>
+  <div>
+      
+      <div class="body1">
       Home Page
-      <Navbar bg="primary">
-        <Container>
-          <Link to={"/"} className="navbar-brand text-white">
-          React & Larevel CRUD APP
-          </Link>
-        </Container>
-      </Navbar>
-     
-
      <Container className='mt-5'>
       <Row>
-        <Col md={12}>
+        <Col md={13}>
           <Routes>
             <Route exact path="/" element={<ProductList />}/>
             <Route path="/product/create" element={<CreateProduct />}/>
@@ -36,6 +30,9 @@ function Home() {
       </Row>
      </Container>
      </div>
+
+
+  </div>
   )
 }
 

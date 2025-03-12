@@ -39,12 +39,12 @@ function ProductList() {
         await axios.delete(`http://localhost:8000/api/products/${id}`).then(({data}) =>{
             Swal.fire({
                 icon: 'success',
-                text: data.mesage
+                text: data.message
             })
             fetchProducts()
         }).catch(({response:{data}}) => {
             Swal.fire({
-                text: data.mesage,
+                text: data.message,
                 icon: 'error'
             })
         })
@@ -66,16 +66,21 @@ function ProductList() {
                             <tr>
                                 <td>Title</td>
                                 <td>Description</td>
+                                <td>Price</td>
+                                <td>Amount</td>
                                 <td>Image</td>
                                 <td>Actions</td>
                             </tr>
                         </thead>
+
                         <tbody>
                         {products.length > 0 ? (
                             products.map((row, key) => (
                                 <tr key={key}>
                                     <td>{row.title}</td>
                                     <td>{row.description}</td>
+                                    <td>{row.price}</td>
+                                    <td>{row.amount}</td>
                                     <td>
                                         <img width="50px" src={`http://localhost:8000/storage/product/image/${row.image}`} alt=""/>
                                     </td>
