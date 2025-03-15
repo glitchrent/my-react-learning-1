@@ -4,7 +4,7 @@ import { Navbar } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { BrowserRouter, Routes, Route, Outlet } from "react-router";
 import Home from "../pages/Home";
-import About from "../pages/About";
+import About from "../pages/about/About";
 import Contact from "../pages/Contact";
 import Dashboard from "../pages/admin/Dashboard";
 import Manage from "../pages/admin/Manage";
@@ -13,6 +13,8 @@ import Layout from "../layouts/layout";
 import LayoutAdmin from "../layouts/LayoutAdmin";
 import CreateProduct from "../components/CreateProduct";
 import EditProduct from "../components/EditProduct";
+import LoginForm from "../pages/LoginForm";
+import RegisterForm from "../pages/RegisterForm";
 
 
 const AppRoutes = () => {
@@ -26,6 +28,8 @@ const AppRoutes = () => {
 
     <Route path="/product/create" element={<CreateProduct />}/>
     <Route path="/product/edit/:id" element={<EditProduct />}/>
+    <Route path="login" element={<LoginForm />} />
+    <Route path="register" element={<RegisterForm />} />
       
       {/* Public */}
       <Route element={<Layout />}>

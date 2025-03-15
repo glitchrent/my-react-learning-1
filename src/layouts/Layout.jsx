@@ -27,6 +27,8 @@ const Layout = () => {
           <a href='../Home'>Home</a>
           <a href='../About'>About</a>
           <a href='../Contact'>Contact</a>
+          <a href='../Login'>Login</a>
+          <a href='../Register'>Register</a>
         </Container>
       </Navbar>
       <Outlet />

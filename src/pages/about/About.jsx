@@ -1,5 +1,5 @@
 import React from 'react'
-import Tabletab1 from '../components/Tabletab1';
+import Tabletab1 from '../../components/Tabletab1';
 
 const About = () => {
   return (
